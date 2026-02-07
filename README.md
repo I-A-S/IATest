@@ -1,5 +1,3 @@
-# IATest (Independent Architecture Test)
-
 <div align="center">
   <img src="logo.png" alt="IATest Logo" width="400"/>
   <br/>
@@ -9,14 +7,11 @@
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey.svg" alt="Platform"/>
 
   <p>
-    <b></b>
+    <b>IA Single Header C++ Test Framework</b>
   </p>
 </div>
 
 ## **About**
-
-
-## **Core Modules**
 
 ## **Integration and Requirements**
 

@@ -1,4 +1,4 @@
-// IATest; Single Header Test Library for All IA Open Source Projects
+// IATest; IA Single Header C++ Test Framework
 // Copyright (C) 2026 IAS (ias@iasoft.dev)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
