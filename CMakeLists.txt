@@ -28,4 +28,11 @@ add_library(IATest INTERFACE)
 
 target_include_directories(IATest INTERFACE "${IATest_ROOT}/include")
 
+if(MSVC)
+    target_compile_options(IATest INTERFACE "/EHsc")
+else()
+    target_compile_options(IATest INTERFACE "-fexceptions")
+endif()
+set_target_properties(IATest PROPERTIES USE_EXCEPTIONS ON)
+
 target_link_libraries(IATest INTERFACE Auxid)
