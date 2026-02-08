@@ -59,6 +59,11 @@ private:
                                                                                                                        \
   private:
 
+namespace ia
+{
+  using namespace auxid;
+}
+
 namespace ia::test
 {
   template<typename T>
