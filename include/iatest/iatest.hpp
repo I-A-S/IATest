@@ -59,10 +59,25 @@ private:
                                                                                                                        \
   private:
 
+#if !defined(IA_B_LIKELY)
+// if IA_B_LIKELY is not defined, then we're building without IACrux
+// so bring in the console polyfills
 namespace ia
 {
   using namespace auxid;
-}
+
+  namespace console
+  {
+    constexpr const char *RESET = "\033[0m";
+    constexpr const char *RED = "\033[31m";
+    constexpr const char *GREEN = "\033[32m";
+    constexpr const char *YELLOW = "\033[33m";
+    constexpr const char *BLUE = "\033[34m";
+    constexpr const char *MAGENTA = "\033[35m";
+    constexpr const char *CYAN = "\033[36m";
+  } // namespace console
+} // namespace ia
+#endif
 
 namespace ia::test
 {
