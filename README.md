@@ -121,7 +121,38 @@ Ran 3 test(s) across 2 block(s)
 -----------------------------------
 ```
 
+## **API Reference**
+
+### **Assertions**
+
+All assertions return false immediately if the check fails, stopping the current test function.
+
+| Macro | Description |
+| :---- | :---- |
+| IAT\_CHECK(condition) | Fails if condition is false. |
+| IAT\_CHECK\_NOT(condition) | Fails if condition is true. |
+| IAT\_CHECK\_EQ(lhs, rhs) | Fails if lhs \!= rhs. Prints values on failure. |
+| IAT\_CHECK\_NEQ(lhs, rhs) | Fails if lhs \== rhs. |
+| IAT\_CHECK\_APPROX(lhs, rhs) | Fails if abs(lhs \- rhs) \> epsilon (default 0.001). |
+| IAT\_CHECK\_APPROX\_EPS(lhs, rhs, eps) | Fails if abs(lhs \- rhs) \> eps. |
+
+### **Block Management**
+
+| Macro | Description |
+| :---- | :---- |
+| IAT\_BEGIN\_BLOCK(Group, Name) | Starts a new test class derived from ia::test::Block. |
+| IAT\_END\_BLOCK() | Closes the class definition. |
+| IAT\_REGISTER\_ENTRY(Group, Name) | Statically registers the block to be run by TestRegistry. |
+
+### **Test Registration**
+
+These macros must be used inside the IAT\_BEGIN\_TEST\_LIST() section.
+
+| Macro | Description |
+| :---- | :---- |
+| IAT\_ADD\_TEST(func\_name) | Registers a member function as a test unit. |
+| IAT\_NAMED\_UNIT(name, func\_name) | Registers a function with a custom display name. |
+
 ## **License**
 
-Copyright (C) 2026 IAS (ias@iasoft.dev)
-Licensed under the Apache License, Version 2.0 (the "License");
+Copyright (C) 2026 IAS. Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
