@@ -18,6 +18,7 @@
 #include <auxid/auxid.hpp>
 
 #include <sstream>
+#include <iostream>
 
 #define __iat_micro_test(call)                                                                                         \
   if (!(call))                                                                                                         \
